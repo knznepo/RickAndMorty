@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+#header-banner {
+  display: block;
+  height: 460px;
+  width: 100%;
+  background-color: rgb(111, 111, 111);
+  overflow: hidden;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#header-banner > div {
+  position: absolute;
+  z-index: 10;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+#header-banner h1 {
+  font-size: 3em;
+  font-weight: bolder;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#header-banner img {
+  display: block;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  position: absolute;
+}
+
+#search-form input,
+#search-form button {
+  font-size: 1.5em;
+  font-weight: bolder;
+  border: none !important;
+  border-radius: 0;
+}
+
+#search-form .input-group {
+  border: 2px solid;
+  border-color: rgb(118, 118, 118);
+  border-radius: 0.25rem;
+}
+
+#search-form .input-group:focus {
+  border-color: #86b7fe;
+}
+
+#search-form input:focus,
+#search-form button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: none !important;
+}
+
+#search-form input {
+  border-left: 0;
+}
+
+#search-form button {
+  border-color: #ced4da;
+  border-right: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.d-grid {
+  grid-gap: 40px;
+}
+
+.grid-2 {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 6px;
+}
+
+.grid-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-item {
+  transition: all .3s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1px #ccc;
+  z-index: 999;
+}
+
+.grid-item > div {
+  height: 100%;
+}
+
+.grid-item img {
+  width: 100%;
+}
+
+.character-details {
+  margin-top: 10px;
+  color: rgb(164, 164, 164);
+  font-size: .9em;
+}
+
+.character-details a {
+  text-decoration: none;
+}
+
+.character-details svg {
+  color: rgb(96, 96, 96);
+}
+
+@media (max-width: 920px) {
+  .grid-4 {
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 540px) {
+  .grid-4, .grid-2 {
+    grid-template-columns: 1fr;
   }
 }
